@@ -84,8 +84,16 @@ const productos = [
   "Buzos",
   "Musculosas",
 ];
-for (let i = 0; i < productos.length; i++) {
-  alert(productos[i]);
+
+//Con for tradicional
+// for (let i = 0; i < productos.length; i++) {
+//   alert(productos[i]);
+// }
+// console.log("Lista de productos mostrada correctamente.");
+
+//Con for of
+for (const producto of productos) {
+  alert(producto);
 }
 console.log("Lista de productos mostrada correctamente.");
 */
