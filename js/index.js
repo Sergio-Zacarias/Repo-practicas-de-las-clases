@@ -97,3 +97,38 @@ for (const producto of productos) {
 }
 console.log("Lista de productos mostrada correctamente.");
 */
+
+// Ejercicio clase 11
+// Numero 1
+// Definí cuatro funciones diferentes: suma, resta, multiplicación y división.
+// Cada función recibirá dos parámetros numéricos y devolverá el resultado
+// de la operación correspondiente.
+// En el caso de la función dividir, acordate de verificar que el divisor
+// no sea cero. Si lo es, mostrá un mensaje de error en la consola.
+// Probá el correcto llamando a las 4 funciones con las mismas dos variables.
+// ¡Importante! Mostrá los resultados de cada operación en la consola
+// de forma clara y legible usando console.log().
+
+function suma(num1, num2) {
+  return num1 + num2;
+}
+
+function resta(num1, num2) {
+  return num1 - num2;
+}
+
+function multiplicacion(num1, num2) {
+  return num1 * num2;
+}
+
+function division(num1, num2) {
+  if (num2 === 0) {
+    console.log("Error, no se puede dividir por 0.");
+  }
+  return num1 / num2;
+}
+
+console.log("La suma es: " + suma(2, 3));
+console.log("La resta es: " + resta(10, 5));
+console.log("La multiplicacion es: " + multiplicacion(7, 9));
+console.log("La division es: " + division(14, 7));
