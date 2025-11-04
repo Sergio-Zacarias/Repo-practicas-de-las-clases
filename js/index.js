@@ -109,26 +109,106 @@ console.log("Lista de productos mostrada correctamente.");
 // ¡Importante! Mostrá los resultados de cada operación en la consola
 // de forma clara y legible usando console.log().
 
-function suma(num1, num2) {
-  return num1 + num2;
-}
+// function suma(num1, num2) {
+//   return num1 + num2;
+// }
 
-function resta(num1, num2) {
-  return num1 - num2;
-}
+// function resta(num1, num2) {
+//   return num1 - num2;
+// }
 
-function multiplicacion(num1, num2) {
-  return num1 * num2;
-}
+// function multiplicacion(num1, num2) {
+//   return num1 * num2;
+// }
 
-function division(num1, num2) {
-  if (num2 === 0) {
-    console.log("Error, no se puede dividir por 0.");
-  }
-  return num1 / num2;
-}
+// function division(num1, num2) {
+//   if (num2 === 0) {
+//     console.log("Error, no se puede dividir por 0.");
+//   }
+//   return num1 / num2;
+// }
 
-console.log("La suma es: " + suma(2, 3));
-console.log("La resta es: " + resta(10, 5));
-console.log("La multiplicacion es: " + multiplicacion(7, 9));
-console.log("La division es: " + division(14, 7));
+// console.log("La suma es: " + suma(2, 3));
+// console.log("La resta es: " + resta(10, 5));
+// console.log("La multiplicacion es: " + multiplicacion(7, 9));
+// console.log("La division es: " + division(14, 7));
+
+// Numero 2
+// 1. Creá una función llamada generarProductos() que no reciba parámetros.
+// 2. Dentro de la función, armá un array llamado productos con al menos 5
+// objetos.
+
+// Cada producto debe tener:
+// a. id: un identificador numérico único
+// b. name: nombre del producto
+// c. description: descripción breve
+// d. precio: precio en formato numérico
+
+// 3. Retorná el array completo desde la función.
+
+// 4. Fuera de la función, guardá el resultado en una variable y recorré el
+//  array para mostrar en consola cada producto. Al hacerlo, utilizá la
+// desestructuración ({ id, name, precio }) dentro del bucle para acceder a
+// las propiedades de una forma más limpia.
+
+// 5. Creá un objeto para un nuevo productoOferta.
+
+// 6. Usando el spread operator (...), creá un nuevo array
+// catalogoActualizado que contenga todos los productos del catálogo original
+// más el nuevo productoOferta.
+// Mostrá este nuevo array en la consola.
+
+const generarProductos = () => {
+  const producto = [
+    { id: 3, name: "zapatillas", description: "T-Mac1", precio: 180000 },
+    { id: 1, name: "short", description: "Short de tu equipo", precio: 15000 },
+    { id: 7, name: "medias", description: "Medias largas", precio: 3000 },
+    { id: 10, name: "pelota", description: "Moltean N7", precio: 7500 },
+    {
+      id: 8,
+      name: "sudadera",
+      description: "Reversible(blanco y negro)",
+      precio: 9800,
+    },
+    { id: 4, name: "vendas", description: "Para tobillos", precio: 2500 },
+    {
+      id: 2,
+      name: "bolso",
+      description: "Para entrenamiento o viajes",
+      precio: 39000,
+    },
+  ];
+
+  return producto;
+};
+
+// let resultado = generarProductos();
+
+// resultado.forEach(({ id, name, description, precio }) => {
+//   console.log(
+//     `Producto numero y nombre ${id} ${name}.Descripcion: ${description} tiene un valor de $ ${precio} `
+//   );
+// });
+
+// 6. Usando el spread operator (...), creá un nuevo array
+// catalogoActualizado que contenga todos los productos del catálogo original
+// más el nuevo productoOferta.
+// Mostrá este nuevo array en la consola.
+let catalogoOriginal = generarProductos();
+const productoOferta = {
+  id: 19,
+  name: "aro de basquet",
+  description: "Jirafa con soporte + aro con tablero de acrilico ",
+  precio: 20000,
+};
+
+const agregarProducto = (catalogo, producto) => {
+  const nuevoCatalogo = [...catalogo, producto];
+  return nuevoCatalogo;
+};
+const catalogoActualizado = agregarProducto(catalogoOriginal, productoOferta);
+catalogoActualizado.forEach(({ id, name, description, precio }) => {
+  console.log(
+    `Producto numero y nombre ${id} ${name}.Descripcion: ${description} tiene un valor de $ ${precio} `
+  );
+});
