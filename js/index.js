@@ -202,6 +202,7 @@ console.log("Lista de productos mostrada correctamente.");
 //   );
 // });
 
+//IMPORTACION Y EXPORTACION DE MODULOS
 //La importacion se hace arriba de todo, pero lo hago aca solo para probar.
 import { agregarProdCarrito } from "./carrito.js";
 const carrito = [{ nombre: "short", precio: 15000 }];
