@@ -201,3 +201,23 @@ console.log("Lista de productos mostrada correctamente.");
 //     `Producto numero y nombre ${id} ${name}.Descripcion: ${description} tiene un valor de $ ${precio} `
 //   );
 // });
+
+//La importacion se hace arriba de todo, pero lo hago aca solo para probar.
+import { agregarProdCarrito } from "./carrito.js";
+const carrito = [{ nombre: "short", precio: 15000 }];
+
+const programa = () => {
+  console.log("1- Agregar producto");
+
+  let opcion = prompt("Elija una opcion");
+  if (opcion === "1") {
+    let nombre = prompt("Ingrese nombre del producto");
+    let precio = parseInt(prompt("Ingrese el precio"));
+
+    const nuevoProducto = { nombre, precio };
+    agregarProdCarrito(nuevoProducto, carrito);
+  }
+};
+
+programa();
+console.log(carrito);
